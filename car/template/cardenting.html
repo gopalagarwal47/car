@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balaji car clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style>
+        div.img {
+            margin-left: 721px;
+            margin-top: -370px;
+        }
+
+        div.form {
+            color: white;
+            border-radius: 20px;
+            padding: 14px;
+            margin: 25px;
+            width: 245px;
+            margin-left: 133px;
+            margin-top: 87px;
+            background-color: black;
+        }
+
+        div.written {
+            margin: 141px;
+        }
+
+        img {
+            width: 389px
+        }
+
+        @media (max-width: 600px) {
+
+            div.img {
+                margin-left: 55px;
+                margin-top: 0px;
+                width: 350px;
+
+            }
+
+            div.written {
+                margin: 3pc;
+                margin-left: 23px;
+            }
+
+            div.form {
+                margin-left: 65px;
+            }
+
+            img {
+                width: 276px;
+
+                margin-top: 20px;
+            }
+
+        }
+    </style>
+
+
+</head>
+<style>
+    @media only screen and (max-width: 375px) and (min-width: 500px) {
+
+        div.img {
+            margin-left: 50px;
+            margin-top: 0px;
+            width: 350px;
+
+        }
+
+        div.written {
+            margin: 3pc;
+            margin-left: 0px;
+        }
+
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: red;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: white;">Balaji car clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: white;">conatct us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/service" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            service
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/genral">General</a>
+                            <a class="dropdown-item" href="/genral">Another action</a>
+                            <a class="dropdown-item" href="/genral">Something else here</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="rqst">
+
+            <div class="form"
+                style="color: white;  border-radius: 20px; padding: 14px; margin: 25px;  width: 245px;  margin-left: 104px;  background-color: black;">
+                <br>
+                <h3>Request service</h3>
+                <hr style="color: white;">
+                <form method="POST" action="/general" style="    width: 212px;">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input type="name" class="form-control" id="name" name="name" placeholder="enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Phone no</label>
+                        <input type="phone" class="form-control" id="phone" name="phone"
+                            placeholder="enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Address</label>
+                        <input type="address" class="form-control" id="address" name="address"
+                            placeholder="enter your address">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect3">Car company</label>
+                        <input type="company" class="form-control" id="company" name="company"
+                            placeholder="car company">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect4">model</label>
+                        <input type="model" class="form-control" id="model" name="model" placeholder="car company">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="BOOK NOW" style="margin: 20px;">
+                </form>
+
+
+            </div>
+        </div>
+        <div class="img">
+            <img src="data:image/jpeg;base64,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"
+                alt="img">
+
+        </div>
+        <div class="written">
+            <h1 style="color: tomato;">
+                Car denting:-
+            </h1>
+            <p>
+
+                <br> 1.Car Dent Service Repair - Guaranteed savings
+                <br>
+                <br> 2.General Car Service & Repair - Guaranteed 40% savings
+                <br>
+                <br> 3.Panel Clear Coat Application
+                <br>
+                <br> 4.Panel Rubbing & Buffing
+                <br>
+                <br> 5.Panel Denting
+            </p>
+        </div>
+    </main>
+    <hr>
+    <footer>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small indigo"
+            style="background-color: red; color: white; font-family: cursive;">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/" style="color: white;">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about" style="color: white;">About us</a>
+                            </li>
+                            <li>
+                                <a href="/contact" style="color: white;">Enquiry</a>
+                            </li>
+                            <li>
+                                <a href="/gallery" style="color: white;">Gallery</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">support</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/Termandcondition" style="color: white;">Term and Condition</a>
+                            </li>
+                            <li>
+                                <a href="/Privacypolicy" style="color: white;">Privacy policy</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">servives</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/carwashing" style="color: white;">Car wash</a>
+                            </li>
+                            <li>
+                                <a href="/wheelcare" style="color: white;">Wheel care</a>
+                            </li>
+                            <li>
+                                <a href="/cardenting" style="color: white;">Denting</a>
+                            </li>
+                            <li>
+                                <a href="/customrepairing" style="color: white;">Car repair</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">contact us</h5>
+                        <h5>
+                            Mobile no:-
+                        </h5>
+                        <p>
+                            9414060503
+                        </p>
+
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+
+        </footer>
+        <!-- Footer -->
+        <div>
+            <br>
+            <center>
+                <h5>Made by G.A developer</h5>
+                <p>contact no.9929901435</p>
+            </center>
+        </div>
+        <div>
+            <section class="copy" style=" 
+    margin-left:px; background-color: grey;">
+                <center>
+                    copyright &copy; 2027-All right reserved
+                </center>
+            </section>
+        </div>

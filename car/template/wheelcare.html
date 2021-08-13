@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balaji car clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style>
+        div.img {
+            margin-left: 721px;
+            margin-top: -370px;
+        }
+
+        div.form {
+            color: white;
+            border-radius: 20px;
+            padding: 14px;
+            margin: 25px;
+            width: 245px;
+            margin-left: 133px;
+            margin-top: 87px;
+            background-color: black;
+        }
+
+        div.written {
+            margin: 141px;
+        }
+
+        img {
+            width: 389px
+        }
+
+        @media (max-width: 600px) {
+
+            div.img {
+                margin-left: 55px;
+                margin-top: 0px;
+                width: 350px;
+
+            }
+
+            div.written {
+                margin: 3pc;
+                margin-left: 23px;
+            }
+
+            div.form {
+                margin-left: 65px;
+            }
+
+            img {
+                width: 276px;
+
+                margin-top: 20px;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: red;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: white;">Balaji car clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: white;">conatct us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/service" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            service
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/genral">General</a>
+                            <a class="dropdown-item" href="/genral">Another action</a>
+                            <a class="dropdown-item" href="/genral">Something else here</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="alert alert-success" role="alert">
+            This is a success alert—check it out!
+          </div>
+        <div class="rqst">
+
+            <div class="form">
+                <br>
+                <h3>Request service</h3>
+                <hr style="color: white;">
+                <form method="POST" action="/general" style="    width: 212px;">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">name</label>
+                        <input type="name" class="form-control" id="name" name="name" placeholder="enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">phone no</label>
+                        <input type="phone" class="form-control" id="phone" name="phone"
+                            placeholder="enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Address</label>
+                        <input type="address" class="form-control" id="address" name="address"
+                            placeholder="enter your address">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect3">company</label>
+                        <input type="company" class="form-control" id="company" name="company"
+                            placeholder="car company">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect4">model</label>
+                        <input type="model" class="form-control" id="model" name="model" placeholder="car company">
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="BOOK NOW" style="margin: 20px;">
+                </form>
+
+
+            </div>
+        </div>
+        <div class="img">
+            <img src="https://th.bing.com/th/id/OIP.dw-4bchaxMJJBUydlMXdigHaEK?w=266&h=180&c=7&o=5&pid=1.7" alt="">
+
+        </div>
+        <br>
+        <div class="written">
+            <h1 style="color: tomato;">
+                Wheel care service:-
+            </h1>
+            <p>
+
+                <br> 1.Widest Workshop Network for Car Service in Jaipur
+                <br>
+                <br> 2.15 Day Service Warranty – No Questions Asked
+                <br>
+                <br> 3.General Car Service & Repair - Guaranteed 30% savings
+                <br>
+                <br> 4.Genuine & OEM spare parts – Quickest delivery
+                <br>
+                <br> 5.Best Reviews for Car Service in Jaipur - 100+ Experienced Mechanics
+            </p>
+        </div>
+    </main>
+    <hr>
+    <footer>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small indigo"
+            style="background-color: red; color: white; font-family: cursive;">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/" style="color: white;">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about" style="color: white;">About us</a>
+                            </li>
+                            <li>
+                                <a href="/contact" style="color: white;">Enquiry</a>
+                            </li>
+                            <li>
+                                <a href="/gallery" style="color: white;">Gallery</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">support</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/Termandcondition" style="color: white;">Term and Condition</a>
+                            </li>
+                            <li>
+                                <a href="/Privacypolicy" style="color: white;">Privacy policy</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">servives</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/carwashing" style="color: white;">Car wash</a>
+                            </li>
+                            <li>
+                                <a href="/wheelcare"style="color: white;">Wheel care</a>
+                            </li>
+                            <li>
+                                <a href="/cardenting" style="color: white;">Denting</a>
+                            </li>
+                            <li>
+                                <a href="/customrepairing" style="color: white;">Car repair</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">contact us</h5>
+                        <h5>
+                            Mobile no:-
+                        </h5>
+                        <p>
+                            9414060503
+                        </p>
+
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+
+        </footer>
+        <!-- Footer -->
+        <div>
+            <br>
+            <center>
+                <h5>Made by G.A developer</h5>
+                <p>contact no.9929901435</p>
+            </center>
+        </div>
+        <div>
+            <section class="copy" style=" 
+    margin-left:px; background-color: grey;">
+                <center>
+                    copyright &copy; 2027-All right reserved
+                </center>
+            </section>
+        </div>
+
+   

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji car clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style>
+        img {
+            width: 1313px;
+            height: 339px;
+        }
+
+        div.written{
+            margin: 26px;
+        }
+
+        @media (max-width: 600px) {
+            img {
+                width: 415px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: red;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: white;">Balaji car clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about" style="color: white;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: white;">conatct us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/service" id="navbarDropdown" role="button"
+                            style="color: white;">services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <br>
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAB0AVYDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAAECAwQFBgf/xABSEAACAQMCAwUEBAcKCgsBAAABAgMABBEFEgYhMRMiQVFhFHGBkTKhorEVIzNCUoKyB1NiY3KSlcHR8BYkNERkc5PC0tMlNUZUVVZ0g4Sjw+H/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAMhEAAgEDAgQDBwQCAwAAAAAAAAECAxEhEjEEE0FRImGhBTKRsdHh8EJScYEUI2LB8f/aAAwDAQACEQMRAD8A9HbOTz8aZ3ufOpmHM++mEUBCd3nTTu86mK00ryoCI7vOm97zNTFaTbQEXe86Tn51Lt9KTbQEfP1o71SbaNtAR97zo5+dSbaTbQDO950ne86k2mjaaAj5+Zo5+ZqTbRtoCPn5mjn61JtpMHyoBne8zRz86ftPlRtoBnPzo5+dP2nyo2nyoBnPzo50/afKjbQDO950vPzp200u00AzvedLz8zT9tG2gGc/M0c/M0/bRtoBne8zR3vOn4o20AzveZo73nT9tG2gGZPrRk+Zp+KTFAMyfM0ZPmaftpMUA3J8zRk+ZpxFJigG8/Ok508j0pdtAM7w6UU8jFFAX2HM++kxTyOZ99JQEbFEBZyFVRlixAUDzJPKofabL/vNv/tov+Kn3drb3ttcWlwpaCdDHKoYruXIOMrg/XXCa1oWj2Op8OWlvAVhvrgpcqZJGLqZETAZiSOvga6KFOFR2bsc9erOkrpYO5SWCUkRyxOQO92bqxGfPaTT9tZUFjw7w3Fc3QZLSOcRpK800jByuSqqHJJPM8gKmsde0HUZDDZ3sckvMhCHRmA5kqJAM/Cs5Q6wu0XjU6Tsn2L22grUFzqelWcvYXV5BDL2L3O2UkEQoCS5OMY5HxqvFruhTWrXqXieyrcLamV1lUduwyI8Fc5PuqNEt7FuZC9rl7bRtrPl4h4dhuWs31CAXCt2bqNzIj5xteRQUB8DzouuIOHrOc21xfwpOuO0jG9+zzzxIYwQD8anlTvazI5tO19SNDbSbabPeWFtbG8nuIYrUBT2rt3CG+jtK5JJ8MCq1hrWianI0NleRyzKpcx4dJNg/OCuASKrola9idcU9LeS3tpG2ICzsqqOrMQqj3liBU+2uN4jSJta0ldV7QaMYGVcFxALnvE9rs5/o59MetXpU+ZLSUrVOVHUdWuxwCjKykZBUggjzBHKl2Vy3CaZvNckshMNEaVVse13AO6sQzRhueMYz8PEcuv20qw5ctKdyaVTmQ1NWIdppNhqfbSbayNSHYaNlTbaNtAQ7aNtTbaNoqAQ7aNtTbRRigIQlLtNSYpdtARbRRtqUCl20BFtpNtTbaNtAQ7aNtTbaTFARbacF5U/HMU/bQERQeNNMflVjbS7RUgqbT40m2rez0FNMQPTlQFXbRtyanMbDw+VKqcs0BAyVExI5CrbDrVNztJqARl2HWimMc0VBJtH6R99JilP0j76SrECYrkeJv8Arzg7/wBV/wDsldfWZqGi22o3ml3ks06Pp0naRJHs2Odwfv7lJ8PAitqM1CeqRz8RTdSGleRzWvi5ueJdItlitphFaCW1hvWdbeSVt5YnYCSeQxy8MUanp+uzyaXLNHoFlNDdxm2miuJ45JGGG7Ib0weQzj/irpNX0Oy1ZYTI8sNxbkmC4gIEsZPMgZ5YqhbcKQrdQXeo6healJbndbrdsDFGwIIO3Jzj1OPTNdMK0VGOcry/Ec06EnOWLp+f4yhqlvDc8X6FDOivH7EZWRgCpaMzuoZTyIB51NxnFDDom2FFjBvrdj2YC94rJk93xral0e2m1a01dpZhNbQNbpECnZFWD82yN2e8fGnaxpNvrNr7JPLLFGJY5t0BXeSmQB3weXOs41kpQbeFuaSoS0zVsvYwuI9P0+24akMFvCnsy2zQlUUFSXVCc4zzBOfOln0+wj4Rk2wx7l02O53bRvMxVJDIW67iScnPjW9qWmQ6lp82nyySRxSiNWeLbvARgwxuBHhz5Usumwy6Y2ll5Fia1W0MgK9psVQu7JBXPLyoq9opX63EqHibtvG39nMrpVxq3C3D6QSos1qsFxEJhmJ2AKhHGD8OXhVrTNTlXU4rLVdLitNSngYQ3EGxo7iNMttVh3gOpHMjljlV6fhy1k0/TbCO6u4jpu1rS4icCVHAxuIA2n5Uljw+YL1NRvtQutQvI42ige4CKkKtyOxEGM9R8as6sJRabxm3coqU4yTS7X7G5jOB58vdXDW9q/Fd/rEt/cSpbWMz2lnaQtgRE7gJG8zy+JyDyGK7rA6Vz15wvDNdzXtlf3un3E/Oc2jKFkJ6naemfHnWVCcYXzZ9GbV6bnbF11RiJrOr6HDcaJLbe06lEYodJZACk0chwhkXIPLwHLyP0ct21uZmhhadVWZo0MqoxZFcgEhWPMjy5Vzw4M0kwSI894907rK180v+Mh1Oe4SCoz7vjyroreJ4YYonmeZkUIZZQod8fnNsAXPnyqa8qcsx36+Y4eFWOJ7dPIfijFOormOobijFOoqCBuKQinUUA3FGKdRQDcVl63qcmk2kVwkUR7WfsGnuc+zWuVJV5VQh2LHCqo6k+la1VNSsLfVLC+0645Q3kDws3Uxv1SRfVThh7qAp6Fq0esWjS5X2iCQw3SqpQB+ZDqhZsBhzHeNa1eUaDqVxoGstDfkxtFK2mauvRMqQEnXwx0cejV6x9fkQcjHpUvBEX0Y3nRTqKgkSkxTsUcqAbjnT6SjNFuSOxS4pBThUgMUYp1FANxSFeXWn0UBUkjkAYr3vvqhIGOQcgjzrZIFRPHHJyZQfXxHxqLAwGbBweR9aK0bjTVkIKPj+X/aKKixYvnqffRSnqffSVYqFFFFAFHpR/f41xt7eavr+q3WkaZcta2Fn3L65iz2kjAlSAQQcEghRnwJPlWtOm536JGVSqqdsXbOy/v7vfRiuT/wKiiUS2eralFdjmsxkVhvA6sqhT9r+w9NYx3UVpax3colukhjWeRekkgUbmHIfdScIrMXcQnKT8cbE2DS4NQR32nyyGKK7tZJRnMcc0Tvy/gq2fqqd5Io13SOiLkDdIyoMnoMscVnZl7p7Bg0YNRSXunwyCGW7tkmOMRyTRLIc9O4zbvqqfK4znlgk+mOuc0swmmRsVRWZ2VVUZZnIVQPMk8qEZJFDxsro3NWQhlI8wV5Vj65d2Nzouupb3NvMyWUu9YZY5CvTqEJrPsrBNR4Q0y0a8azRre3czKyqBsYkK24gEHyz91aql4bt2zYylW8WlK+LnU+XrRg+R+VYGuX8+h6JE9nNHJcxC1hja52ytKmNpcqCMk461LqlnFrWlQxNqJtAXgleaCSMLvUc0JLBfHIGeRA8sVCp4Um8MnmZaSyjaowaSJQkUabiwSNRvc5JCr9Jm+81HFe6fO5jhu7aV1zuWKaJ2H6qEms7X2NNSW5Lg0u00rvDGFMkiIGIVS7KuWPQDJ5momvdNSYW73dqs5IAiaeISEnw2Ft2fhSzewbS3Jdp9aNp9ae7xRo0kjoiINzvIwVFHmzNyqOC6sroMba4gnCnDGCRJAD5HYTSz3F1ewu0+tBU1NtFGBUEkIU0bTU2BTJXWKOWQ9EUt7z4CmOo3djzv90HR+za21+Fe4FjsNWAwF7PJFvcN4d0koxz0Yfo1ucG6hcX2lx291HMs9mqpE86MntFqeUcibuZx9En0HnVnUBNqFreW0joYLqF4ZI5UV0IYY+iR8R7q8+06+1DQNbT2uLbc2/4q8kkPbS39rMCFuPaHJYqSOgwBtxjK97ONSMrlp0nGzPX9lGysW24gWUKTCpB6FSw/arRGpWxAO2T1AAOKiNWD2ZZ0proWtgo2Cq51CzCgmUeHLBB+RqlLrUK5CLny3HHjUyqQjuyFTk9kabrhWPkM1XDZrHl1mZ8jIUHwA/tq9DKHVXHMEA1WFWM34S0qco7l5TUgqsrVMprYzJRS00U7lQBRTXdI13OwVfNjj5eNZc2rAFhEAqLnMkgOT6hemKpKpGG7LxpylsahwM+Q6nwqlcX8UWezxIfPJ2A+XrWU13Ncd8s+zOF35G4/wAEdMVXmaVlw3Qedck+J6RR0w4frJluTVQ+FkRkAyd0XeDH1HWisOe4trZUeaXYHJVBgsxx1IC88CiphLiJq8YtopUdCEtMpJM7g9T76SlPU++krtOYKKKKAOmCegIJ+BzXGcJstrqfEthN3bn2oy4bq6IXU492Qf1q7OsDWOHY9QnivrW4ez1GLGy4iHJtvTeoIOR0BB9OY5DoozilKEtmc9aEm4zjlx6HQA9PUjGPGuU4wurhk0fTIJmij1S6ENxKh6xhkXbny72T7vWo20Xje5U29xr8a27Da5giYSsp5H6IU/Nq1L3h61vNKtNNaSQGzjhW2uBgyI8aCMMRyHMdR/ZkTBQpyUnK5Scp1YuMY2/kytV4W0O10q5uLONre6s4HuY7hZJO0LRgMd7Z6n78VR1i+uL/AIO0y6mIM5u7fc5H0njMyCTHqQDWhJoHFl9GtjqOtxHTwV7T2eErcTqpyA7ED6yfPmemjq3D63ukW2lWcqW0dvJA0ZZDIoSJWXbgMp5565++t1VUXHXK7vf+jB0pNScI6Va1vMzNU4b0SDRL+4WHfeR2xuWu5Sz3EkuVZmkdjzzzz/8AyqOpXt43CXDcCzOrag9vazyluZjAxtY9fLPnt9a7G/sXvNNvLFHVHuLYwB2Xcqk47xUEffWZLw2s+g2mjzTgy2qR9lcRpgCVN2GCEnlgkEZqsKyxrfX0L1KErvlq2DP1XhnRLLR7y4tIjDc2ts7CcO++VRgMkpJwQw6jHX3VTvufAFqCOXY2PUfxpq/JoPFd9bPZajrMBtlTEYgg78rr9Azu2CVHUjPPHWrlxw9cTcOQ6Et1GskaQIbgxsUPZsWJEe7PP+VV1VS0qc75v/Rm6Tepwha6sY/FFnaHh+x1Ex/45DbWFtHJubuxMNxXbnb9VLxFY2VhwnHBaxbImu7WdlJZvxkisWbLknnW7q2iTajo0WlpcJE6i1BlZGdT2K7ThAwPP30utaLNqulR6dHcJCyPbsZHjLqREpBG0MOufOqQrpKKb2dy06D8TUd0kZPE09zO3DejJM0Nvqcie1uhwWRSqhM/M48yPKm6zw1o1jpc17p6Na3VjGs8U0cj7mIZRhmJ6nPI+dberaFDq1pbwtI0VxbFXtriPrHIAATtz0OBnn4Dny55EnD3FGorHaatrMbaejK0i2kWya429N7kDn68/PrzE06kbRtK1t/MTpNuV43vt5FDXby4v+HOFbpztuZry3beBjbKUKdovlz7wq1r/Dmh2mh3lxb2yrdQrHL7QWYzSs0iKxkdiSc5ya2NX4eOoWelWVrLHbRWNzBMoMbOOziUKI1AYfOr+r6bJqWmXljHIsT3CIgkdSwXEiucqpB8POo56WnS7Zd/iS+HclLUr4Vvgczqlpqmq8PcNyQqbrsUtLm7tncqboGFepzzPXPP86rHDtzwydQnFtpsmm6q9uI5beRDGDGhyezUdz1PdB5VoXGi60mn6LBp+p9jc6dHEjbkzbXRWMRntUGWxy5cz1+Ij0/QdWbVU1jWLu2kuIbdre3hsomjhRWzlmZ+8TzOPf8ACo1xcGr2WbWI5c1NSSzi9zou0FHaCn9mKOzFeeeiM3jx5DzrJvLuWbtI17sYJGPE7T4mtnsxWHdSRe1TKmCpIwR0Lgd7FY1m7G1BLVkzzdErNCRiaHBIP58bdHHp4Hy+NZl9YwapA0NxhZVD+zXAXLwO3X1KN0dc8xz6gES6nGLgxtDM8FzESYposblJHMEHkVPiDVGLUpklS11JEinchYbiPlbzN5H9Fj8udedrcZYPR0qUbPqYovtS07fplwhjvbYK8MitvjurZs7HyeRxzGR0xg9a6zRr100u2uZ2ZpJ1eQK/PC7iAefPn1qleRwXkPYXcZYjd2Dx8preQjG6JsZz5jofEVdktE9khVZHDQwJHEMBQBGuO8D5n76m7nJuIjDStLGXF21xzChdrYyPzgarbmNMWVYgA4BbALDwz5UvtAbooA8Kq03uMdBSWzWlp94EIhkOAT3CfXwNZJcHrTd48D41aEnB3RSSUlZnaI1WVb7q5my1aNdsVweQwFf+2t+GWORQyMGUjqDXrQmpq6PPnBxeS6D0qrfX6Wkfd5yscKOu3lncfCplb1qK4tLe570iKWA+kSR0HU4OKmalbBEHFPxbHNy6hNIzD8Y7+mWOT0oSAkme7YOR9CEDEaE+DeJP1e+rk5tIVYREY/SUcsnkNv8AVUESgd9iSy5IBORGOuWJ5Z868uatKzdz01JNYVh5aRSsjAA/mqRnA+NZuoanFb5L4eUj8XD/ALz+Qqtf65HGzx2RWV8Fe2POND4lARzPr099c47O7M7szOxLMzEliT4kmvT4X2c6jU6uF27ni8Z7UjSvCjl9+iJJ55Z5XllO5m8uQUeAUeQoqKivo4xjFWSPmJSlJ3bPYz1PvpKU9T76Svnz6sKKKKAKKKKAWikopcC0tJSZoB1FJk0ZNAL0pKMmkzQC5pabSjxoBwpRTaUUA8U4UwdacKhgfSgU3Jpc0A6ikzRmgCufv7UQOMZ2NkxnxBBzj4V0GaqXtt7VAYwdrqwkjbydayqw1RNKc9MrnG3UkUbgzdoob89FLrz/AEgveHyNRzw2l3CQTHNEwHNSGGPvp+pq9rLtudkROSA5AVwOe5CeorBn1LSoCXN5FHJ5qxB+PKvLcXsz1VJNXuWYLiTTZE7VnuLKMjDHvT24zjqx7yj35Hr0ra1SeZYEZEk7OQYDkZL5AKlNuTjrXHPxFpI7j3UDg5BK7gefoARW/ZahNqS20NjeLFptrCZex9nVpp5VbvI8kwyIwuNuznnr6bUYYaZjVm1Zozpe3TLPDc8+eTBL/WtVhfMzGOOO4dvFUjc4+qvQY+1lCCSZ5FCqFDMcYAxVqK3ReiKD6D+uulcLfLZzuu10PPEj16U/itMuyD0ZgEX7VWk0biyb/NoI8/pyjI9+BXoQTwwtO2HzXrV1w0epm68jhI+GddbnNfW0QPUIjMR8TV+20O8tGV49auEYcyI41KH0KtkV1nZZ5kj5UjxRojSSMiRgZZ5CERR5lmwK0jRhF4RR1G9yhHedkqiaQyMPpMqbM/CotR1BRa/imwJCC7dD2eMkAfL+5qrfa/w/ahljkN7KMgLagdmD/Cmfu/IGuU1DWr2+ygWK3gzyjgzkj+HI3eP1Cut8NUqRtHByPjaNKV3n+DVa+tLT8ddvunC/4vaR4eRM/nyn6IJ8B4e+sS81O7ux2RPZ2+SexjJw3q7dSfqqjRXVw3AU6Gd33PM4r2jV4jw7R7IKQkDmSAB1z0qzZWOoalL2NhbvOwIDsvKKP/WSHuj7/SuotNH0vSH33Ri1PVo9rCBWVbOzfwMhc9R4Z5+QHUdVSvGnuclLh51dljuZmm8ONcwC81S5/BtpKMWvaACeduu7a/RcZx4n0/OK2p5LqaVri4eOWV+6CHXCJ1CIoyAv9ySaK8afHVNTsj3afs6npVzqz1PvoqE3EZJ7KOec55ezxkr8ZJNqfaqGaXUUXe0dhZx/vmoXRY4/kRBV/wDsqLM2cki5S7WPQE+4E1iNeRSMytxC7nxj0SxV/TAdUmb7VRG1sZ8dpYcSX3kb66khjP6ks0Y+xVlEz5vZG3LNbQc57i3hH8dNFH+0wqjJr3DkXJtWsSefKKXtTy5dIgaqxadbx84eF9JiPg13cRO/2IZD9qrkaaygxHHoduMnlFb3EnLwxgxj6qtpj1I1z6f9/YgPEehc+ykvZz/o1heOD6AlAKQa/C35PSdfk9V09lH22FXOz11sZ1SFP9Rp6j59pK1Hs+pn6es3h8xHBYoPh+KJ+up8C/8AfsR/t/F9yn+Gb9s9nw3rbfo9oLePPvy1INU11vo8LX/pvvLRfnVv2Gc/T1XVmHkJoE+uOIUfg4eOoawfffSD7gKaodvmLVf3P0+hV/CHFB6cMMPfqVt9eKX23ir/AMsr8dSt6s/g6E9brVT6nU70fUsgH1Un4Mtv3/VP6Tv/APm1OqPb8+JGip3fp9Cv7ZxZkY4bi245/wDSUOSfTwpPbuKh/wBmR/SVvVn8GWv79qf9JX3/ADaBptt19o1T+k7/AP5tRqj2+f1I0VO79PoVDqPFA68Lv+rqFufuo/C2vrnfwrfZ/i7u2arh06PwvdWX+TqN0f22NJ+DsdNR1gf/ADXP1MDU6odvmTpqd36fQqDXNTX8pwxrK/6swyfdR/hGU/LaDr8Y9LUP+yauew3APd1fVh75bdv2oTT/AGXUge7rV+PIPDYP88w5qLw7fMm1VdfkUBxVpi/lLLWoj5SafL/uk05eLuGc9+6miz17a0uF2+87TV3sNcB5axnHhJYQEfHawNBj18D/ACzTJT/G2Ey/sTmng/H9iL1V19PuQrxRws/TVrQeH4wvH+2oq5Hq+iyfk9T09uWeVzF0+Jqm9tqzn8ZZ8Pzjx3xToT/OV6rSaYkgHbcLaJL5mG4iXl6B7dfvqNMH1+Q1VOtvg/ub6TQyfk5Yn5fmSI33GpO9y7v31yTaJo53F+EriMk4zZ3dvnH6s6UwaZo8RPZ23FtmQRzt5LplBHiBE7io5ce45slul+f0dNMdT3D2dLTb4mdpd3yQYpg/CZHfSyPnh5h99c8RbRkdnxTxBbnPIXtvIwB9TPbj76cJNSbHsvG2nyEkgLc29nuyPQMD9VTy/P0ZPO/4+qNp7Ttv8otLOQc+rs2P5yVXOhaEx3Po2mMepPYxE5+KVQ7Lj5hug1TSLlSMgrGi5+SH76ruf3TUz+KtH9YhaE/APinJv1Q/ybfpfwNpdG0VPoaXYr/JiiH3LU4srZfydpEP5JC8/gK5R7z90tORtZ//AG7ayf8AZJqrJefuisCGj1YZ/QtYgfgUSrrhn3RnLjF+1/A7mOCRAFS3iVVAVQrnkB4fRp774lDOsKKOpeUKPmRXnEn+HE2RImvsDjIxdKvyXAqo2kcRSnL6Xqch85YXJ+bmtVwveSMnxr/TBnoU+t6NbA9rf2II/NinMr/zYVJrKn4z0mPIgtrm4PnkQofi+W+zXKJoHEj8hpV2PLd2SD7TirKcKcUv/mKpn99uYBj+YWrRUKMfekYviuIl7sbFq64y1eXItYra1TwKqZpR+tL3fs1g3N5f3rb7u5mnbOR2zsyj3LnaPgK3l4M1sLuuLnTbZfEvLI+PsgfXTl4b0SLAuuI4HbJzHYRpI/LlyAaRvs1qp0Ye79TnlDianvfQ5jFICCwRcs5OAiAs5Poq5NdzBoXDaYMOlaxqB8Gu91vAf9uYh9k1sW9vewKEs7PSdLjxg9lGbmf39wRpn3lqiXFxXuotDgpP3mcNZcNcRX2GSzNvEeZlvj2IA8wnOQ/zR762bPh3QYWxPNNrNyp71vYKFtUb+Nk3bP50g91dI2nxzc72e5vTyO25cC3yP9HiCxfMGrSqqKqIqqijCqihVX3KvKuSfFTkdtPgoRy8/wAlJLa7aJYWMVlZqMLZ6aSnd8pLgBW+ChfeaZ+CNLACi2jAHMBRjn8K0aK5JNvc74rTsZTaFpLdYfkzD+uitXFFVsi12YWiXV9rxvGvbu4RIXCpFZyG3Qg/pGPD/arXj0nSIm3LZwFyTmSZe2kP6825vroorpqYeDmoeJXlkuBQBgZA8hyHyFJtWiisWbyw8C7R60bR60UULAFHrRtWiipZZpIXatN2j1ooqDNBtFJtHrRRQkNo9aNo9aKKATaKXaOfWiigF2j1p20etFFQQtxQq+tO2j1ooq5eSSF2jHjRtWiiqSbTMxdq0m0etFFEVbYuPU/M1FJbWsuRLDDIMYxJHG/Ly7wooqWSs7lN9G0KTcW02zBz1SFYz848GhdD0wA9kb2HP7xfXkfyAkxRRV4tkSiuwj6UEV2TUtXG0EgG8dh9sE1kPJqMZwup32Of0mhb746KK6acU90cNSTWzG+06r/4nefK2/ripUm1J2AbU73HTkYB90dFFbOEbbGWuV9zXi0wyorvqWrEsMkC7ZB9gCntounkHtZL+bHP8fqF6w92O0xRRXFPGx2wysiJo2hocjT7QkfnSRrK3n1lyatJHFH3YkSNfKNVQfJQKKKw1Nrc6VFLZDio9fnTNoooq0tkXDaKaVHrRRQqJgetIwFFFQBpoooqQf/Z"
+            alt="img">
+        <center>
+            <h1>
+                Term & Condition
+            </h1>
+
+        </center>
+        <div class="written">
+            <p>
+                These Terms of Use (together with the documents referred to in them) govern your use of our website and
+                its related sites, services, applications, and tools. By using the services you confirm that you accept
+                these Terms of Use and that you agree to abide by them.
+                <br>
+            <h5>
+                PART A – INFORMATION ABOUT US
+            </h5>
+            The Website is operated by ("We"). Please visit the Contact Us page on this website for our contact details.
+            <br>
+            <h5>
+                PART B - TERMS APPLICABLE TO CUSTOMERS
+            </h5>
+            Part B of these Terms of Use sets out certain terms and conditions which are applicable to any person
+            registering as a Customer and using the Services of
+            <br>
+            <h5>
+                1. Registering as a Customer
+            </h5>
+            You will be asked to provide certain information about yourself including your name, contact details and
+            vehicle information. You must ensure that the information provided by you is correct, complete and not
+            misleading. You should also inform us promptly of any changes to the information that you have provided, by
+            updating your details, so we can communicate with you effectively.
+            <br>
+            <h5>
+                2. Provision of Services to Customers
+            </h5>
+            We will make certain services available to you. The services will include: <br>
+             i. the ability to search service
+            providers for automotive repair/servicing for the work to be performed on your vehicle,<br>
+             ii. ability to view
+            detailed profile of service providers and their services prices and ratings information and the ability to
+            post feedback and ratings in relation to any service provider you have used as a result of your use of the
+            Website. You must only book a service if you have a genuine requirement for the work detailed to be
+            performed. You must only post Feedback in relation to a Service Provider if you have used them as a result
+            of your use of the website. We are continually seeking to develop and improve the services we offer and so
+            we reserve the right, at our absolute discretion, to make changes to any part of the service without notice.
+            <br>
+            <h5>
+                3. Our Responsibilities to you
+            </h5>
+            If you use Services as a Customer, you acknowledge and agree that the services we provide are subject to the
+            following limitations and disclaimers: Although we have asked all users to use responsibly, we cannot
+            guarantee the accuracy, integrity or quality of any information you view or receive of Service Providers.
+            This includes any information contained about details of Service Providers who are listed in our directory
+            or quality of service you may receive from Service Providers you avail using . If you use , you also
+            acknowledge and agree that information contained in any sections are intended to be indicative only and will
+            not form the basis of a binding contract between you and any Service Provider. If you choose to instruct a
+            Service Provider to carry out any work for you as a result of your use, we strongly recommend that you
+            conclude your own written agreement with them clearly detailing the work to be done and the price to be
+            paid. We will not be a party to any agreement or contract which you conclude with a Service Provider as a
+            result of your use of . PLEASE NOTE: We ( .) will not, under any circumstances, have any responsibility to
+            you or liability to you for the performance or quality of any work which you ask any Service Provider to
+            carry out.
+            <br>
+            <h5>
+                4. Provision of Payment Platforms to Customers
+            </h5>
+            Some services made available for booking to you include the opportunity to make payments facilitated through
+            our service. Such payments will be made using trusted third party payment gateways or Cash or Debit/Credit
+            Cards. By making a payment through , you undertake that the credit or debit card details, or third party
+            wallet login credentials that you provide are for your own credit or debit card, or wallet account, and that
+            you have sufficient funds to make the payment for the services booked. We reserve the right to alter prices
+            or services or cease to list services at any time, without prior notice or warning. Payment options provided
+            may differ between service providers, and services offered. In cases where cash on delivery (COD) is not
+            available as an option, full payment must be made for through a payment option offered to you before
+            services are provided to you. In cases where cash on delivery (COD) is offered and selected as a payment
+            method, full payment must be made directly to the service provider at the time of service completion.
+            <br>
+            <h5>
+                PART C – GENERAL TERMS APPLICABLE TO ALL USERS
+            </h5>
+            Part C of these Terms of Use set out certain terms and conditions which are applicable to all users of this
+            website including customers and service providers
+            <br>
+            <h5>
+                1. Passwords and Security
+            </h5>
+            If you register to use ’s services, you will be given a username and password. You must keep your ID
+            confidential and must not disclose it or share it with anyone. You are responsible for preventing
+            unauthorised use of your ID. If you believe that there has been a breach of security such as the disclosure,
+            theft or unauthorised use of your ID, you must notify us immediately. If we reasonably believe that your ID
+            is being used in any way which is not permitted by these Terms of Use, we reserve the right to suspend
+            access rights immediately on giving notice to you and to block access from your ID until the issues has been
+            resolved.
+            <br>
+            <h5>
+                2. Acceptable Use Policy
+            </h5>
+            The Services allow registered users to create, edit and submit material for inclusion on or transmission via
+            , including (without limitation) by posting service bookings, responding and updating status of bookings and
+            posting ratings feedback for automotive services. Whilst we do not seek to monitor or control the submission
+            of information, we do reserve the right to delete, move and edit any material submitted where (in our
+            absolute discretion) we consider it prudent or necessary to do so. You agree to comply with all applicable
+            laws and regulations when using . You are solely responsible for all material you submit for inclusion on or
+            transmission via . You must ensure that all material you transmit is lawful and honest. In particular, you
+            must not post or transmit any material that: <br>
+            Is fraudulent, dishonest or misleading; Is unlawful, harassing, libelous, abusive, threatening, harmful,
+            vulgar, obscene, or otherwise objectionable or breaches any laws; Encourages conduct that constitutes a
+            criminal offence, gives rise to civil liability or otherwise breaches any applicable laws, regulations or
+            code of practice; Infringes the copyright or other rights of any third party; is technically harmful
+            (including, without limitation, computer viruses or other malicious software or harmful data) By submitting
+            material to us, you are granting us a royalty­ free, non-­exclusive license to use, reproduce, modify,
+            translate, make available and distribute the Material on or through for the purpose of operating Services.
+            <br>
+            <h5>
+                3. Disclaimers
+            </h5>
+            Our endeavor is to ensure that the information available on or through is correct, up to date and accurate,
+            however, we do not warrant the accuracy and completeness of such material. In particular (but without
+            limitation), permits you to access and receive information supplied by third parties. The third parties
+            submitting this information are responsible for ensuring that material submitted is accurate and complies
+            with relevant laws and codes. We will not be responsible to you for the conduct of any such third party or
+            for any error or inaccuracy in any material that they supply. Although we aim to offer you the best service
+            possible, we make no promise that services will always meet your requirements. We cannot guarantee that
+            services will be fault free or continuously available. Your access to may occasionally be restricted to
+            allow for repairs, maintenance or introduction of new features.
+            <br>
+            <h5>
+                4. Liability
+            </h5>
+            To the fullest extent permitted by law, we exclude all liability to you for any loss of profit, loss of
+            opportunity, loss of earnings, loss of anticipated earnings or loss of data or for any indirect or
+            consequential losses, howsoever arising out of your use of or any fault or problem relating to or any
+            content received via .
+            <br>
+            <h5>
+                5. Termination of Services
+            </h5>
+            We may suspend or cancel your registration and/ or terminate your access to if you are in breach of these
+            Terms of Use or have made improper use of the services. You may cancel your registration at any time by
+            informing us in writing. Once you do so, you must stop using the services. The suspension, cancellation or
+            termination of your registration and your right to use the services shall not affect either party’s
+            statutory right or liabilities.
+            <br>
+            <h5>
+                6. Intellectual Property
+            </h5>
+            We and our licensors expressly reserve all intellectual property rights in all text, programs, products,
+            processes, technology, content and other materials, which appear on this Website. Access to this Website
+            does not confer and shall not be considered as conferring upon anyone any license under any of our or any
+            third party's intellectual property rights. All rights, including copyright, in this Website are owned by or
+            licensed to us . Any use of this Website or its contents, including copying or storing it or them in whole
+            or part, other than for your own personal, non­commercial use is prohibited without our prior permission.
+            You may not modify, distribute or re­post anything on this Website for any purpose. The names and logos and
+            all related product and service names, design marks and slogans are the trademarks or service marks of or
+            licensed to . All other marks are the property of their respective companies and you shall not use or
+            exploit the same in any manner whatsoever. No trademark or service mark license is granted to you in
+            connection with the materials contained on this Website. Access to this Website does not authorize anyone to
+            use any name, logo or mark which appear on the Website in any manner. References on this Website to any
+            names, marks, products or services of third parties or hypertext links to third party websites or
+            information are provided solely as a convenience to you and do not in any way constitute or imply our
+            endorsement, sponsorship or recommendation of the third party, information, product or service. We are not
+            responsible for the content of any third party websites and do not make any representations regarding the
+            content or accuracy of material on such websites. If you decide to link to any such third party websites,
+            you do so entirely at your own risk. All materials, including images, text, illustrations, designs, icons,
+            photographs, programs, music clips or downloads, video clips and written and other materials that are part
+            of this Website (collectively, “the Contents”) are intended solely for personal, non­commercial use. You may
+            download or copy the Contents and other downloadable materials displayed on the Website for your personal
+            use only. No right, title or interest in any downloaded materials or software is transferred to you as a
+            result of any such downloading or copying. You may not reproduce (except as noted above), publish, transmit,
+            distribute, display, modify, create derivative works from, sell or participate in any sale of or exploit in
+            any way, in whole or in part, any of the Content, the Website or any related software. All software used on
+            this Website is the property of or its suppliers and licensors and protected by Indian and international
+            copyright laws. The Content and software on this Website may be used only as a shopping resource. Any other
+            use, including the reproduction, modification, distribution, transmission, republication, display, or
+            performance, of the Content on this Website is strictly prohibited. Unless otherwise noted, all Content are
+            copyrights, trademarks, trade dress and/or other intellectual property owned, controlled or licensed by us,
+            our affiliates or by third parties who have licensed their materials to us and are protected by Indian and
+            international copyright laws. The compilation (meaning the collection, arrangement, and assembly) of all
+            Content on this Website is the exclusive property of and is also protected by Indian and international
+            copyright laws.
+            <br>
+            <h5>
+                7. Privacy and Cookies
+            </h5>
+            The website includes areas where you are requested to input information about yourself. Any information you
+            submit to us shall be subject to the terms of our Privacy Policy. We use cookies on our Website. By
+            registering, use you are consenting to our use of cookies
+            <br>
+            <h5>
+                8. General
+            </h5>
+            All notices shall be given to us via email or by post using the contact details set out in the Contact Us
+            section, or to you at either the email or postal address you provide during registration. We may revise
+            these Terms of Use at any time. You are expected to check these Terms of Use from time to time to take
+            notice of any changes we make as they are legally binding on you. Some of the provisions contained in these
+            Terms of Use may also be superseded by provisions or notices published elsewhere on our Website.
+            <br>
+            <h5>
+                9. Applicable Law
+            </h5>
+            These Terms and Conditions will be subject to the laws of Delhi, India and the courts shall have
+            jurisdiction to resolve any disputes between us. These Terms of Use were last updated on 30th july 2021.
+            </p>
+        </div>
+
+
+
+
+    </main>
+    <hr>
+    <footer>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small indigo"
+            style="background-color: red; color: white; font-family: cursive;">
+
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/" style="color: white;">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about" style="color: white;">About us</a>
+                            </li>
+                            <li>
+                                <a href="/contact" style="color: white;">Enquiry</a>
+                            </li>
+                            <li>
+                                <a href="/gallery" style="color: white;">Gallery</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">support</h5>
+
+                        <ul class="list-unstyled">
+                            
+                            <li>
+                                <a href="/Termandcondition" style="color: white;">Term and Condition</a>
+                            </li>
+                            <li>
+                                <a href="/Privacypolicy" style="color: white;">Privacy policy</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">servives</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/carwashing" style="color: white;">Car wash</a>
+                            </li>
+                            <li>
+                                <a href="/general" style="color: white;">Wheel care</a>
+                            </li>
+                            <li>
+                                <a href="/cardenting" style="color: white;">Denting</a>
+                            </li>
+                            <li>
+                                <a href="/customrepairing.html" style="color: white;">Car repair</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">contact us</h5>
+                        <h5>
+                            Mobile no:-
+                        </h5>
+                        <p>
+                            9414060503
+                        </p>
+
+
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+
+        </footer>
+        <!-- Footer -->
+        <div>
+            <br>
+            <center>
+                <h5>Made by G.A developers</h5>
+                <p>contact no.9929901435</p>
+            </center>
+        </div>
+        <div>
+            <section class="copy" style=" 
+    margin-left:px; background-color: grey;">
+                <center>
+                    copyright &copy; 2027-All right reserved
+                </center>
+            </section>
+        </div>
+
+
+
+</body>
+
+</html>
