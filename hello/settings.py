@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tc6w+@wkutkej@&i$nzi5*2lwe9-ggt&6m!o=3*@a*cci!*&vt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'balajicarclinic.herokuapp.com' ]
+ALLOWED_HOSTS = ['balajicarclinic.herokuapp.com']
 
 
 # Application definition
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'hello.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:\Users\hp\Desktop\car\hello\car\template"],
+        'DIRS': [BASE_DIR/"car/template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
