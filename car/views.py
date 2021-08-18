@@ -2,6 +2,7 @@ from django.db.models.base import Model
 from django.shortcuts import render, HttpResponse
 from car.models import Contact
 from car.models import Service
+from hello.utils import message_mail
 
 
 # Create your views here.
@@ -19,6 +20,7 @@ def contact(request):
           address = request.POST['address']
           textarea = request.POST['textarea']
           print(name,phone,address,textarea)
+          message_mail(name,phone,address,textarea)
           contact = Contact( name=name, phone=phone, address=address, textarea=textarea)
           contact.save()
      return render(request, 'contact.html')

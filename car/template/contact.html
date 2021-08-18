@@ -11,6 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <style>
         img {
             width: 1313px;
@@ -54,21 +65,26 @@
             margin-top: -331px;
         }
 
+        p#msg.alert-success {
+            display: none;
+        }
+
         @media (max-width: 600px) {
             img {
-                width: 415px;
+                width: 378px;
             }
 
             div.divone {
-                margin-left: -184px;
+                margin-left: -212px;
             }
 
-            div.divtwo{
-                margin-left: -203px;
+            div.divtwo {
+                margin-left: -233px;
             }
 
             div.divthree {
-                margin-left: -198px
+                margin-top: 106px;
+                margin-left: -326px;
             }
 
             div.divforth {
@@ -77,14 +93,14 @@
 
             }
 
-            div.form{
+            div.form {
                 margin-left: 25px;
-    width: 352px;
+                width: 352px;
             }
 
-            div.divthree{
+            div.divthree {
                 margin-top: 109px;
-    margin-left: -311px;
+                margin-left: -311px;
             }
 
 
@@ -93,12 +109,18 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg " style="background-color: red;">
+    <nav class="navbar navbar-expand-lg " style="background-color: rgb(0, 0, 0);">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/" style="color: white;">Balaji car clinic</a>
+            <a class="navbar-brand" href="/" style="color: white;">
+                <h4>Balaji car clinic</h4>
+            </a>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                </div>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                aria-label="Toggle navigation" style="color: white!important;">
                 <span class="navbar-toggler-icon" style="background-color: white;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -110,26 +132,38 @@
                         <a class="nav-link" href="/contact" style="color: white;">conatct us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/service" id="navbarDropdown" role="button"
-                            style="color: white;">services
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            services
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/general">General</a></li>
-                            <li><a class="dropdown-item" href="/cardenting">cardenting</a></li>
-                        </ul>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/general">General services</a>
+                            <a class="dropdown-item" href="/carwashing">Car washing</a>
+                            <a class="dropdown-item" href="/cardenting">Car denting</a>
+                            <a class="dropdown-item" href="/customrepairing">Custom repairing</a>
+                            <a class="dropdown-item" href="/numberplating">Number plating</a>
+                            <a class="dropdown-item" href="/wheelcare">Wheel care service</a>
+                        </div>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
             </div>
+            <span>
+                <a href="https://api.whatsapp.com/send?phone=+919414060503&text=Bienvenido%2C+estamos+listos+para+ayudarte+a+tener+Bienestar+y+Salud+con+los+productos+100%25+naturales+de+Doterra"
+                    style="display: table; font-family: sans-serif; text-decoration: none;color: #fff; font-size: 0.9em; padding: 1em 2em 1em 3.5em; border-radius: 2em; font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; background-size: 1.6em;">Contact
+                    on WhatsApp</a>
+            </span>
         </div>
     </nav>
+
     <main>
 
         <br>
         <img src="https://th.bing.com/th/id/OIP.pyRKDlAqvIS5NPVt6etrXQHaDy?w=345&h=178&c=7&o=5&pid=1.7" alt="img">
+        <center>
+            
+            <!-- <p id="msg" style="display: none;">enable</p> -->
+        </center>
         <center>
             <h1>
                 Contact us
@@ -140,6 +174,9 @@
                 <img src="https://gomechanic.in/assets/img/call.svg" class="figure-img img-fluid rounded" alt="img."
                     style="height: 109px;">
                 <figcaption class="figure-caption">Helpline number.</figcaption>
+                <p>
+                    9414060503
+                </p>
             </figure>
         </div>
         <div class="divtwo">
@@ -147,12 +184,16 @@
                 <img src="https://gomechanic.in/assets/img/email.svg" class="figure-img img-fluid rounded" alt="img."
                     style="height: 109px;">
                 <figcaption class="figure-caption">Email.</figcaption>
+                <p>
+                    Ravibharat@gmail.com
+                </p>
             </figure>
         </div>
         <div class="divthree">
             <figure class="figurethree">
                 <img src="https://gomechanic.in/assets/img/office1.svg" class="figure-img img-fluid rounded" alt="img."
                     style="height: 234px;">
+                <p>cc-*** gol market jhawar nagar jaipur</p>
                 <figcaption class="figure-caption">Location</figcaption>
             </figure>
 
@@ -162,6 +203,7 @@
         <hr>
         <br>
         <div class="form">
+            <h5>Contact us</h5>
             <form method="POST" action="/contact">
                 {% csrf_token %}
 
@@ -184,18 +226,47 @@
                     <textarea class="form-control" id="textarea" rows="3" name="textarea"
                         placeholder="tell about your enquiry here...!"></textarea>
                 </div>
-                <input class="btn btn-primary" type="submit" value="Submit" style="margin: 20px;">
+
+                <!-- <input id="btn" onclick="show()" class="btn btn-primary" type="submit" value="Submit"
+                    style="margin: 20px;">
+                <p id="msg" class="alert-success" style="display: none;">
+                    This is a success alert- our agent contact you as soon as possible
+                </p>
+                <script>
+                    var btn = document.getElementById('btn')
+                    btn.addEventListener('click', show())
+
+                    function show() {
+                        console.log("yes");
+                        var msg = document.getElementById("msg")
+                        msg.style.display = "block"
+                    }
+                </script> -->
+                
+                <p id="msg" class="alert-success" style="display:none;">This is a success alert- our agent contact you as soon as possible</p>
+                <button onclick="myFunction()" class="btn btn-primary" style="margin: 20px;">sumbit</button>
+
+                <script>
+                    function myFunction() {
+                        let msg = document.getElementById("msg")
+                        msg.style.display = "block";
+                    }
+                    setTimeout(myFunction,60000);
+
+                </script>
+
             </form>
 
 
         </div>
         <div class="divforth">
             <div>
+                <h5>Location</h5>
                 <!-- Google Map Copied Code -->
 
-                "<iframe
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.3006103370194!2d75.83632051452024!3d26.893953167372835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db77f236763d3%3A0xb56f208073eec1eb!2sBalaji%20car%20clinic!5e0!3m2!1sen!2sin!4v1628437833389!5m2!1sen!2sin"
-                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    width="350" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0">
                 </iframe>
             </div>
@@ -208,7 +279,7 @@
 
         <!-- Footer -->
         <footer class="page-footer font-small indigo"
-            style="background-color: red; color: white; font-family: cursive;">
+            style="background-color: black; color: white; font-family: cursive;">
 
             <!-- Footer Links -->
             <div class="container text-center text-md-left">

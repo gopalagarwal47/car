@@ -11,28 +11,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
-    <style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    div.card-group {
+        margin: 110px
+    }
+
+    img.d-block {
+        height: 448px;
+        width: 1142px;
+    }
+
+    @media (max-width: 600px) {
         div.card-group {
-            margin: 110px
+            margin: 0px
         }
 
         img.d-block {
-            height: 448px;
-            width: 1142px;
+            width: 500px;
+            margin-left: -59px;
         }
 
-        @media (max-width: 600px) {
-            div.card-group {
-                margin: 0px
-            }
-
-            img.d-block {
-                width: 500px;
-            }
-
-
+        img.imgone{
+            margin: 48px;
         }
-    </style>
+
+
+    }
+</style>
 
 </head>
 
@@ -49,7 +64,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation" style="color: white!important;">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -60,24 +75,26 @@
                         <a class="nav-link" href="/contact" style="color: white;">conatct us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/service" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
-                            service
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            services
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/general">General</a>
-                            <a class="dropdown-item" href="/general">Another action</a>
-                            <a class="dropdown-item" href="/general">Something else here</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/general">General services</a>
+                            <a class="dropdown-item" href="/carwashing">Car washing</a>
+                            <a class="dropdown-item" href="/cardenting">Car denting</a>
+                            <a class="dropdown-item" href="/customrepairing">Custom repairing</a>
+                            <a class="dropdown-item" href="/numberplating">Number plating</a>
+                            <a class="dropdown-item" href="/wheelcare">Wheel care service</a>
                         </div>
                     </li>
-
-
-
                 </ul>
 
             </div>
             <span>
-                <a href="https://api.whatsapp.com/send?phone=+919414060503&text=Bienvenido%2C+estamos+listos+para+ayudarte+a+tener+Bienestar+y+Salud+con+los+productos+100%25+naturales+de+Doterra" style="display: table; font-family: sans-serif; text-decoration: none;color: #fff; font-size: 0.9em; padding: 1em 2em 1em 3.5em; border-radius: 2em; font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; background-size: 1.6em;">Contact on WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=+919414060503&text=Bienvenido%2C+estamos+listos+para+ayudarte+a+tener+Bienestar+y+Salud+con+los+productos+100%25+naturales+de+Doterra"
+                    style="display: table; font-family: sans-serif; text-decoration: none;color: #fff; font-size: 0.9em; padding: 1em 2em 1em 3.5em; border-radius: 2em; font-weight: bold; background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; background-size: 1.6em;">Contact
+                    on WhatsApp</a>
             </span>
         </div>
     </nav>
@@ -91,7 +108,7 @@
                         <img src="https://pristinedetailmn.com/wp-content/uploads/2018/12/full-service-car-wash-best-detail-near-me-ceramic-pro-minneapolis-hand-wash-auto-detail.jpg"
                             class="d-block " alt="...">
                         <span>
-                            <h4 style="margin-top: -80px;
+                            <h4 style="margin-top: -102px;
                             color: white;
                                         font-size: xx-large;">keeping your car New</h4>
                             <p style="font-style: italic; color: white;">Some representative placeholder content for the
@@ -123,8 +140,8 @@
         </center>
         <br>
         <br>
-        <hr>
-        <br>
+
+
         <div id="service" class="boxone">
 
             <center>
@@ -223,10 +240,30 @@
 
 
         </div>
+        <hr>
+        <div class="usecar">
+            <br>
+            <center>
+                <h1>
+                    Second hand car
+                </h1>
+                <p>
+                    <strong>
+                        wide range of second hand avaiabale
+                    </strong>
+                   
+                </p>
+                <img src="" alt="img">
+                <img src="" alt="img">
+                <img src="" alt="img">
+            </center>
+            
+
+        </div>
         <div class="prefer">
             <br>
             <br>
-            <hr style="color: red;">
+            <hr>
             <center>
                 <strong>
                     <h1>
@@ -238,8 +275,8 @@
                     </p>
                 </strong>
             </center>
-            <br>
-            <br>
+            
+            
             <div class="card-group">
                 <div class="card" style="margin: 50px;">
                     <img src="https://gomechanic.in/graphics/GoM%20BENEFITS/png/FREE-PICK-AND-DROP.png"
@@ -291,7 +328,7 @@
 
 
             <hr>
-            <br>
+           
             <br>
             <div class="contioner">
                 <center>
@@ -334,35 +371,35 @@
                         services our provide to our customers
                     </p>
                 </center>
-                <img src="https://th.bing.com/th/id/OIP.-83F4CtW7-Av9GwZhJj88wHaDo?w=284&h=171&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.-83F4CtW7-Av9GwZhJj88wHaDo?w=284&h=171&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.4N389znCzrodEPtdVT8EAQHaGG?w=256&h=211&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.4N389znCzrodEPtdVT8EAQHaGG?w=256&h=211&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.sNRpsYrfSzy1T3OqBbOpbQHaHY?w=212&h=211&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.sNRpsYrfSzy1T3OqBbOpbQHaHY?w=212&h=211&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.MmTPM6LpTh3NWamzYD9cMgHaEK?w=268&h=180&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.MmTPM6LpTh3NWamzYD9cMgHaEK?w=268&h=180&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.AXz3xFOgV2EzZR82n5nDwQHaHa?w=146&h=180&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.AXz3xFOgV2EzZR82n5nDwQHaHa?w=146&h=180&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.K53UUXfjXst0kcnb5jphWwHaEK?w=295&h=180&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.K53UUXfjXst0kcnb5jphWwHaEK?w=295&h=180&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.uHgcKndjpJH0pxy4TVyr_QHaF4?w=211&h=180&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.uHgcKndjpJH0pxy4TVyr_QHaF4?w=211&h=180&c=7&o=5&pid=1.7"
                     alt="img">
-                <img src="https://th.bing.com/th/id/OIP.usdZJSIHFITNoNg6sHZ1RgHaEK?pid=ImgDet&rs=1" alt="img"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.usdZJSIHFITNoNg6sHZ1RgHaEK?pid=ImgDet&rs=1" alt="img"
                     style="height: 138px;">
-                <img src="https://th.bing.com/th/id/OIP.yhaASJzKIVe5S7B1bIgKlAHaD7?w=300&h=180&c=7&o=5&pid=1.7"
+                <img class="imgone" src="https://th.bing.com/th/id/OIP.yhaASJzKIVe5S7B1bIgKlAHaD7?w=300&h=180&c=7&o=5&pid=1.7"
                     alt="img">
+                <img src="https://www.carlogos.org/car-logos/jeep-logo.png" alt="img" class="imgone"> 
+                <img src="https://www.carlogos.org/car-logos/kia-logo.png" alt="img" class="imgone">   
+                <img src="https://www.carlogos.org/car-logos/jaguar-logo.png" alt="img" class="imgone">
+                <img src="https://www.carlogos.org/car-logos/mercedes-benz-logo.png" alt="img" class="imgone">
+                <img src="https://www.carlogos.org/car-logos/renault-logo.png" alt="img" class="imgone">
             </div>
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+          
+           
 
 
 
