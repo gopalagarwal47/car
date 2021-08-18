@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['balajicarclinic.herokuapp.com']
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
