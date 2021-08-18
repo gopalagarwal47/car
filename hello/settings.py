@@ -26,6 +26,8 @@ SECRET_KEY = 'django-insecure-tc6w+@wkutkej@&i$nzi5*2lwe9-ggt&6m!o=3*@a*cci!*&vt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['balajicarclinic.herokuapp.com']
+
 ALLOWED_HOSTS = []
 
 
